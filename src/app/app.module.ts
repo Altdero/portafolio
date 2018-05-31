@@ -6,7 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortafolioComponent } from './components/portafolio/portafolio.component';
 import { AboutComponent } from './components/about/about.component';
-import { ItemComponent } from './components/item/item.component';
+import { ProductoComponent } from './components/producto/producto.component';
 import { appRouting } from './app.routing';
 import { InformacionService } from './providers/informacion.service';
 import { HttpModule } from '@angular/http';
@@ -18,7 +18,7 @@ import { HttpModule } from '@angular/http';
     FooterComponent,
     PortafolioComponent,
     AboutComponent,
-    ItemComponent
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
