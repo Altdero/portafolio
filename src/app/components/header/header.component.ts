@@ -1,5 +1,6 @@
 import { InformacionService } from './../../providers/informacion.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor( public service: InformacionService ) { }
+  constructor(
+    public _infoService: InformacionService,
+    private _router: Router
+  ) { }
+
+  buscarProducto( termino: string ) {
+
+    this._router.navigate( [ 'search', termino ] );
+
+  }
 
 }
