@@ -9,7 +9,7 @@ export class ProductosService {
   productos: any[] = [];
   cargandoProductos: boolean;
 
-  constructor( public _httpClient: HttpClient ) {
+  constructor( private _httpClient: HttpClient ) {
     this.cargarProductos();
   }
 
@@ -18,7 +18,7 @@ export class ProductosService {
     this.cargandoProductos = true;
 
     this._httpClient.get('https://portafolio-b2fcc.firebaseio.com/productos_idx.json').subscribe( ( data: any ) => {
-      console.log(data);
+      this.productos = data;
       this.cargandoProductos = false;
     } );
 
