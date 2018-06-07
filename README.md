@@ -1,5 +1,7 @@
 # Portafolio
 
+Este es un ejercicio en el cual aprendí varias cosas, convertir una plantiilla HTML a un proyecto Angular, comandos básicos de GIT, subiir el proyecto a GitHub y desplegarlos en GitHub Pages
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
 ## Development server
