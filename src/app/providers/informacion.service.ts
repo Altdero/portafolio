@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+// import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class InformacionService {
   // public equipo: Array<any> = [];
   public sobreNosotrosCargada = false;
 
-  constructor( public http: Http ) {
+  constructor( public _httpClient: HttpClient ) {
 
     this.cargaInfo();
     this.cargaSobreNosotros();
@@ -21,20 +22,18 @@ export class InformacionService {
 
   public cargaInfo() {
 
-    this.http.get('assets/data/info.pagina.json').subscribe( data => {
+    this._httpClient.get('assets/data/info.pagina.json').subscribe( ( data: any ) => {
       this.infoCargada = true;
-      this.info = data.json();
-      console.log(this.info);
+      this.info = data;
     } );
 
   }
 
   public cargaSobreNosotros() {
 
-    this.http.get('https://portafolio-b2fcc.firebaseio.com/equipo.json').subscribe( data => {
+    this._httpClient.get('https://portafolio-b2fcc.firebaseio.com/equipo.json').subscribe( ( data: any ) => {
       this.sobreNosotrosCargada = true;
-      this.equipo = data.json();
-      console.log(this.equipo);
+      this.equipo = data;
     } );
 
   }
