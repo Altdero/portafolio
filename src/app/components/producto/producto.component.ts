@@ -9,6 +9,7 @@ import { ProductosService } from '../../providers/productos.service';
 })
 export class ProductoComponent {
 
+  codigo: string;
   producto: any = {};
 
   constructor(
@@ -17,6 +18,7 @@ export class ProductoComponent {
   ) {
 
     _actRoute.params.subscribe( ( params: any ) => {
+      this.codigo = params.id;
       _prodService.cargarProducto( params.id ).subscribe( ( dataProd: any ) => {
         this.producto = dataProd;
       } ) ;
