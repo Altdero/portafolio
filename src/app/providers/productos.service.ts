@@ -24,4 +24,10 @@ export class ProductosService {
 
   }
 
+  public cargarProducto( cod: string ) {
+
+    return this._httpClient.get(`https://portafolio-b2fcc.firebaseio.com/productos/${ cod }.json`);
+
+  }
+
 }
