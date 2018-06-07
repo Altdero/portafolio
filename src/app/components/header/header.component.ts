@@ -14,7 +14,7 @@ export class HeaderComponent {
     private _router: Router
   ) { }
 
-  buscarProducto( termino: string ) {
+  public buscarProducto( termino: string ) {
 
     this._router.navigate( [ 'search', termino ] );
 

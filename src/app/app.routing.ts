@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'home', component: PortafolioComponent },
   { path: 'producto/:id', component: ProductoComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'search/:texto', component: SearchComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'search/:termino', component: SearchComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
