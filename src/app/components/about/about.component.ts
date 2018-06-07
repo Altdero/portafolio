@@ -8,6 +8,6 @@ import { InformacionService } from './../../providers/informacion.service';
 })
 export class AboutComponent {
 
-  constructor( private _infoService: InformacionService ) { }
+  constructor( public _infoService: InformacionService ) { }
 
 }
